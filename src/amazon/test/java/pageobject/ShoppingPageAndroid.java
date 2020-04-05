@@ -33,8 +33,7 @@ public class ShoppingPageAndroid implements ShoppingPage {
         searchEditText.sendKeys(productName);
         ((AndroidDriver) _driver).pressKeyCode(AndroidKeyCode.ENTER);
 
-        //Find any by regular expression
-        //String randomTVUiSelector="new UiSelector().textMatches(\"TV.*$\")";
+        //Find any random product by regular expression
         String randomTVUiSelector="new UiSelector().textContains(\"65\").textContains(\"TV\").textContains(\"$\")";
 
         WebElement randomTvProduct= ((AndroidDriver) _driver).findElementByAndroidUIAutomator(randomTVUiSelector);
